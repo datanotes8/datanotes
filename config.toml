@@ -1,0 +1,7 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Datanotes'
+theme = 'hugo-book'
+
+
+BookMenuBundle = '/menu'
