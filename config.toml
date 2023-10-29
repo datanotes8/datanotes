@@ -3,5 +3,8 @@ languageCode = 'en-us'
 title = 'Datanotes'
 theme = 'hugo-book'
 
-
-BookMenuBundle = '/menu'
+[params]
+  # (Optional, default light) Sets color theme: light, dark or auto.
+  # Theme 'auto' switches between dark and light modes based on browser/os preferences
+  BookLogo = 'logo.png'
+  BookTheme = 'light'
