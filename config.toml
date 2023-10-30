@@ -1,7 +1,8 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://datanotes.tech/home/'
 languageCode = 'en-us'
 title = 'Datanotes'
 theme = 'book'
+googleAnalytics = "G-WH5KX5803C"
 
 [params]
   # (Optional, default light) Sets color theme: light, dark or auto.
