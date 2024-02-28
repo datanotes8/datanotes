@@ -1,4 +1,5 @@
-baseURL = 'https://datanotes.tech/'
+# baseURL = 'https://datanotes.tech/'
+baseURL = “https://datanotes8.github.io/datanotes/
 languageCode = 'en-us'
 title = 'Datanotes'
 theme = 'book'
