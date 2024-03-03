@@ -10,3 +10,5 @@ googleAnalytics = "G-WH5KX5803C"
   # Theme 'auto' switches between dark and light modes based on browser/os preferences
   BookLogo = 'logo.png'
   BookTheme = 'light'
+  BookToC = true
+  BookSection = 'docs'
