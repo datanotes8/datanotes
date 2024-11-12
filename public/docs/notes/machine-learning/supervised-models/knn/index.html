@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="K-nearnest neighbor#Concept#KNN is a special case where no learning is performed. It is a supervised machine learning algorithm. It is also a non-parametric algorithm, meaning it does not have strict requirements for the underlying distribution of the data. It can be used for regression or classification. The data points are grouped together baesd on similarity metric. The prediction is baed on training data only. sklearn implementation of KNeighbors can be found here.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="K-nearnest neighbor#Concept#KNN is a special case where no learning is performed. It is a supervised machine learning algorithm. It is also a non-parametric algorithm, meaning it does not have strict requirements for the underlying distribution of the data. It can be used for regression or classification. The data points are grouped together baesd on similarity metric. The prediction is baed on training data only. sklearn implementation of KNeighbors can be found here." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://datanotes.tech/docs/notes/machine-learning/supervised-models/knn/" /><meta property="article:section" content="docs" />
+
+
+<title>Knn | Datanotes</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="stylesheet" href="/book.min.230af3c3d4911a1c13127b12e52504491348c0be97bd7aba0bdff069b2237cb9.css" integrity="sha256-Iwrzw9SRGhwTEnsS5SUESRNIwL6XvXq6C9/wabIjfLk=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.c0a56f727e5d4ad9f8ea449f7ab5083fa2bd3c68149d8af7beb795ecf89dba40.js" integrity="sha256-wKVvcn5dStn46kSferUIP6K9PGgUnYr3vreV7PidukA=" crossorigin="anonymous"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WH5KX5803C"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-WH5KX5803C', { 'anonymize_ip': false });
+}
+</script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/logo.png" alt="Logo" /><span>Datanotes</span>
+  </a>
+</h2>
+
+
+
+
+
+<div class="magic">
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+<div class="book-switch">
+  <label class="switch">
+      <input id="dark-mode-checkbox" type="checkbox" onchange="darkmode()">
+      <span class="slider"></span>
+  </label>
+  
+  
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Notes</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9597158f190c896a42812719b5c54d34" class="toggle"  />
+    <label for="section-9597158f190c896a42812719b5c54d34" class="flex justify-between">
+      <a role="button" class="">Coding &amp; Tools</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Python</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/notes/coding-tools/python/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>R</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/notes/coding-tools/r/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>SQL</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/notes/coding-tools/sql/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/notes/coding-tools/tools/" class="">Tools</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/notes/coding-tools/tools/resources/" class="">Resources</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a849eeb5135d4d1df797d17aba3ad8b5" class="toggle"  />
+    <label for="section-a849eeb5135d4d1df797d17aba3ad8b5" class="flex justify-between">
+      <a role="button" class="">MLOPs</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/notes/mlops/deployment/" class="">Deployment</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/notes/mlops/deployment/readings/" class="">Readings</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/notes/mlops/resources/" class="">Resources</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/notes/mlops/resources/blogs/" class="">Blogs</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-357512d4f8a8cae074cd15deaa3ccf21" class="toggle"  />
+    <label for="section-357512d4f8a8cae074cd15deaa3ccf21" class="flex justify-between">
+      <a role="button" class="">Experiment Design</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e897585b5da7988270c4a16c52ea11b1" class="toggle" checked />
+    <label for="section-e897585b5da7988270c4a16c52ea11b1" class="flex justify-between">
+      <a role="button" class="">Machine Learning</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-49cdb55a6e4d7ea5330593e9e2420fee" class="toggle"  />
+    <label for="section-49cdb55a6e4d7ea5330593e9e2420fee" class="flex justify-between">
+      <a href="/docs/notes/machine-learning/ml-use-cases/" class="">Ml Use Cases</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/notes/machine-learning/applied-ml/model_pipeline/" class="">Model Pipeline</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/notes/machine-learning/supervised-models/" class="">Supervised Models</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/notes/machine-learning/supervised-models/knn/" class="active">Knn</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/notes/machine-learning/supervised-models/trees/" class="">Trees</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-03d9f23f63e77ba5ea8c34f025c979ed" class="toggle"  />
+    <label for="section-03d9f23f63e77ba5ea8c34f025c979ed" class="flex justify-between">
+      <a role="button" class="">Product</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/notes/product/readings/" class="">Readings</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a8189d9869518a2af7bf60ea9e2499da" class="toggle"  />
+    <label for="section-a8189d9869518a2af7bf60ea9e2499da" class="flex justify-between">
+      <a role="button" class="">Statistics</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/about/"  >
+        About &amp; Contact
+      </a>
+  </li>
+  
+  <li>
+    <a href="/posts/"  >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+<script src="/magic.js"></script>
+<script src="/dark.js"></script>
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Knn</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#concept"><strong>Concept</strong></a></li>
+    <li><a href="#algorithm"><strong>Algorithm</strong></a></li>
+    <li><a href="#distance-calculation-methods"><strong>Distance calculation methods</strong></a></li>
+    <li><a href="#how-is-k-selected"><strong>How is K selected</strong></a></li>
+    <li><a href="#knn-pros-and-cons"><strong>KNN pros and cons</strong></a></li>
+    <li><a href="#common-use-cases"><strong>Common use cases</strong></a></li>
+    <li><a href="#python-implementation-sklearn"><strong>Python implementation (sklearn)</strong></a></li>
+    <li><a href="#python-implementation-raw"><strong>Python implementation (raw)</strong></a>
+      <ul>
+        <li><a href="#step-1-calculate-the-distance">Step 1: Calculate the distance</a></li>
+        <li><a href="#step-2-calculate-knn">Step 2: Calculate KNN</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="k-nearnest-neighbor">
+  <strong>K-nearnest neighbor</strong>
+  <a class="anchor" href="#k-nearnest-neighbor">#</a>
+</h1>
+<h2 id="concept">
+  <strong>Concept</strong>
+  <a class="anchor" href="#concept">#</a>
+</h2>
+<p>KNN is a special case where no learning is performed. It is a supervised machine learning algorithm. It is also a non-parametric algorithm, meaning it does not have strict requirements for the underlying distribution of the data. It can be used for regression or classification. The data points are grouped together baesd on similarity metric. The prediction is baed on training data only. sklearn implementation of KNeighbors can be found <a href="https://scikit-learn.org/stable/modules/neighbors.html"><!-- raw HTML omitted -->here<!-- raw HTML omitted --></a>.</p>
+<!-- raw HTML omitted -->
+<h2 id="algorithm">
+  <strong>Algorithm</strong>
+  <a class="anchor" href="#algorithm">#</a>
+</h2>
+<ul>
+<li>Split into training and validation set.</li>
+<li>Normalize data</li>
+<li>For each validation data point, estimate its distance to all data in training</li>
+<li>Select first k data points in training closest to the validation data point, using the distance metric</li>
+<li>Regression uses k-nearest neighbors&rsquo; mean to predict</li>
+<li>Classification uses majority voting decide the prediction, if there is a tie then tie-breaking mechanism is required</li>
+</ul>
+<p><img src="/post_images/machine_learning/knn.png" alt="targets" /></p>
+<h2 id="distance-calculation-methods">
+  <strong>Distance calculation methods</strong>
+  <a class="anchor" href="#distance-calculation-methods">#</a>
+</h2>
+<ul>
+<li><strong>Euclidean</strong>
+<ul>
+<li>straight line distance</li>
+<li>supports the standard concept of spatial distance</li>
+<li>this distance is known as the l2-norm</li>
+</ul>
+</li>
+<li><strong>Hamming distance</strong>
+<ul>
+<li>number of positions at which corresponding symbols are different for two strings.</li>
+<li>used for comparision of binary data strings</li>
+</ul>
+</li>
+<li><strong>Haversine</strong>
+<ul>
+<li>calculates the distance travelled over the surface of a sphere, such as the Earth</li>
+</ul>
+</li>
+<li><strong>Chebychev</strong>
+<ul>
+<li>assumes the distance is equal to the greatest distance along the individual dimensions</li>
+</ul>
+</li>
+<li><strong>Minkowski</strong>
+<ul>
+<li>a generalization of the Manhattan and Euclidean distances to arbitrary powers</li>
+<li>suitable when there&rsquo;s correlation between features, p=1 is just manhattan distance and p=2 is just euclidean</li>
+</ul>
+</li>
+<li><strong>Manhattan</strong>
+<ul>
+<li>restricts distance measurements to follow grid lines.</li>
+<li>this is sometimes referred to as the Taxi cab distance, since taxis must follow streets, which also gives rise to its formal name, manhattan, for the street grid on the island of Manhattan.</li>
+<li>this distance is also known as the l1-norm</li>
+</ul>
+</li>
+<li><strong>Mahalanobis</strong>
+<ul>
+<li>measure of the distance between a point and a distribution, considering the correlations between features.</li>
+</ul>
+</li>
+<li><strong>Cosine</strong>
+<ul>
+<li>calculate similiarity between vectors</li>
+<li>cosine angle of the bectors</li>
+</ul>
+</li>
+<li><strong>Jaccard</strong>
+<ul>
+<li>similar to cosine</li>
+</ul>
+</li>
+</ul>
+<h2 id="how-is-k-selected">
+  <strong>How is K selected</strong>
+  <a class="anchor" href="#how-is-k-selected">#</a>
+</h2>
+<p>This requires testing and identify the use case of the model. It can be found by experimenting with various k values and check the error rate. At a certain point the accuracy improvement will no longer be significant. The rule of thumb is to use k=sqrt(sample size)/2.</p>
+<h2 id="knn-pros-and-cons">
+  <strong>KNN pros and cons</strong>
+  <a class="anchor" href="#knn-pros-and-cons">#</a>
+</h2>
+<p><strong>Pro</strong>：</p>
+<ul>
+<li>Easy to use, no actual &ldquo;parameter tuning&rdquo; required like other models</li>
+<li>Can be used for regression/classification</li>
+</ul>
+<p><strong>Con</strong>：</p>
+<ul>
+<li>Resource intensive when data scales up</li>
+</ul>
+<h2 id="common-use-cases">
+  <strong>Common use cases</strong>
+  <a class="anchor" href="#common-use-cases">#</a>
+</h2>
+<ul>
+<li>Missing value imputation, this can be added to scikit-learn pipeline</li>
+<li>Quick fix for anomly detection where data can be imputated</li>
+</ul>
+<h2 id="python-implementation-sklearn">
+  <strong>Python implementation (sklearn)</strong>
+  <a class="anchor" href="#python-implementation-sklearn">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.neighbors <span style="color:#f92672">import</span> KNeighborsRegressor
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.metrics <span style="color:#f92672">import</span> mean_squared_error
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> sqrt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.model_selection <span style="color:#f92672">import</span> train_test_split
+</span></span><span style="display:flex;"><span>X_train, X_test, y_train, y_test <span style="color:#f92672">=</span> train_test_split
+</span></span><span style="display:flex;"><span>(
+</span></span><span style="display:flex;"><span>X,
+</span></span><span style="display:flex;"><span>y, 
+</span></span><span style="display:flex;"><span>test_size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.2</span>,
+</span></span><span style="display:flex;"><span>random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>knn_model <span style="color:#f92672">=</span> KNeighborsRegressor(n_neighbors<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>knn_model<span style="color:#f92672">.</span>fit(X_train, y_train)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>train_preds <span style="color:#f92672">=</span> knn_model<span style="color:#f92672">.</span>predict(X_train)
+</span></span><span style="display:flex;"><span>mse <span style="color:#f92672">=</span> mean_squared_error(y_train, train_preds)
+</span></span><span style="display:flex;"><span>rmse <span style="color:#f92672">=</span> sqrt(mse)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>test_preds <span style="color:#f92672">=</span> knn_model<span style="color:#f92672">.</span>predict(X_test)
+</span></span><span style="display:flex;"><span>mse <span style="color:#f92672">=</span> mean_squared_error(y_test, test_preds)
+</span></span><span style="display:flex;"><span>rmse <span style="color:#f92672">=</span> sqrt(mse)
+</span></span><span style="display:flex;"><span>rmse
+</span></span></code></pre></div><h2 id="python-implementation-raw">
+  <strong>Python implementation (raw)</strong>
+  <a class="anchor" href="#python-implementation-raw">#</a>
+</h2>
+<h3 id="step-1-calculate-the-distance">
+  Step 1: Calculate the distance
+  <a class="anchor" href="#step-1-calculate-the-distance">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">distance_calculation</span>(point1,point2):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Calculates the distance between two points
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    distance <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sqrt(np<span style="color:#f92672">.</span>sum((p1<span style="color:#f92672">-</span>p2)<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> distance
+</span></span></code></pre></div><h3 id="step-2-calculate-knn">
+  Step 2: Calculate KNN
+  <a class="anchor" href="#step-2-calculate-knn">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">distance_calculation</span>(point1,point2):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Calculates the distance between two points
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    distance <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>sqrt(np<span style="color:#f92672">.</span>sum((p1<span style="color:#f92672">-</span>p2)<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> distance
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#concept"><strong>Concept</strong></a></li>
+    <li><a href="#algorithm"><strong>Algorithm</strong></a></li>
+    <li><a href="#distance-calculation-methods"><strong>Distance calculation methods</strong></a></li>
+    <li><a href="#how-is-k-selected"><strong>How is K selected</strong></a></li>
+    <li><a href="#knn-pros-and-cons"><strong>KNN pros and cons</strong></a></li>
+    <li><a href="#common-use-cases"><strong>Common use cases</strong></a></li>
+    <li><a href="#python-implementation-sklearn"><strong>Python implementation (sklearn)</strong></a></li>
+    <li><a href="#python-implementation-raw"><strong>Python implementation (raw)</strong></a>
+      <ul>
+        <li><a href="#step-1-calculate-the-distance">Step 1: Calculate the distance</a></li>
+        <li><a href="#step-2-calculate-knn">Step 2: Calculate KNN</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

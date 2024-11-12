@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About &amp; Contact on Datanotes</title>
+    <link>https://datanotes.tech/about/</link>
+    <description>Recent content in About &amp; Contact on Datanotes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://datanotes.tech/about/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

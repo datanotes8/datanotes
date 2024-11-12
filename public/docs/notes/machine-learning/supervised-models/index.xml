@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Datanotes</title>
+    <link>https://datanotes.tech/docs/notes/machine-learning/supervised-models/</link>
+    <description>Recent content on Datanotes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://datanotes.tech/docs/notes/machine-learning/supervised-models/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://datanotes.tech/docs/notes/machine-learning/supervised-models/knn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://datanotes.tech/docs/notes/machine-learning/supervised-models/knn/</guid>
+      <description>K-nearnest neighbor#Concept#KNN is a special case where no learning is performed. It is a supervised machine learning algorithm. It is also a non-parametric algorithm, meaning it does not have strict requirements for the underlying distribution of the data. It can be used for regression or classification. The data points are grouped together baesd on similarity metric. The prediction is baed on training data only. sklearn implementation of KNeighbors can be found here.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://datanotes.tech/docs/notes/machine-learning/supervised-models/trees/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://datanotes.tech/docs/notes/machine-learning/supervised-models/trees/</guid>
+      <description>Tree models#Decision trees#• Tree constructed by recursively splitting a data into new groupings based on statistical measure of the data
+Decision Trees#</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Datanotes</title>
+    <link>https://datanotes.tech/docs/notes/coding-tools/python/</link>
+    <description>Recent content on Datanotes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://datanotes.tech/docs/notes/coding-tools/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://datanotes.tech/docs/notes/coding-tools/python/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://datanotes.tech/docs/notes/coding-tools/python/resources/</guid>
+      <description>Resources#Online coursesProblem Solving with Algorithms and Data Structures using Python WebsitesIntroductory#Google Python Class Think Python: How to Think Like a Computer Scientist Book: Python Crash Course Intermediate/Advanced#Problem Solving with Algorithms and Data Structures using Python Advanced#Book: Robust Python Book: Fluent Python
+Video TutorialsLearn Python - Full Course for Beginners [Tutorial] Pandas &amp;amp; Python for Data Analysis by Example – Full Course for Beginners CS50x 2024 - Lecture 6 - Python Intermediate Python Programming Course Algorithms and Data Structures Tutorial - Full Course for Beginners </description>
+    </item>
+    
+  </channel>
+</rss>

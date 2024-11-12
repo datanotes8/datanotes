@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Datanotes</title>
+    <link>https://datanotes.tech/</link>
+    <description>Recent content in Home on Datanotes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://datanotes.tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Science Job Types</title>
+      <link>https://datanotes.tech/posts/data-science-learning-pathway-copy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://datanotes.tech/posts/data-science-learning-pathway-copy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Science Learning Pathway</title>
+      <link>https://datanotes.tech/posts/data-science-learning-pathway/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://datanotes.tech/posts/data-science-learning-pathway/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://datanotes.tech/docs/hidden/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://datanotes.tech/docs/hidden/</guid>
+      <description>This page is hidden in menu#Quondam non pater est dignior ille Eurotas#</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://datanotes.tech/docs/notes/coding-tools/python/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://datanotes.tech/docs/notes/coding-tools/python/resources/</guid>
+      <description>Resources#Online coursesProblem Solving with Algorithms and Data Structures using Python WebsitesIntroductory#Google Python Class Think Python: How to Think Like a Computer Scientist Book: Python Crash Course Intermediate/Advanced#Problem Solving with Algorithms and Data Structures using Python Advanced#Book: Robust Python Book: Fluent Python
+Video TutorialsLearn Python - Full Course for Beginners [Tutorial] Pandas &amp;amp; Python for Data Analysis by Example – Full Course for Beginners CS50x 2024 - Lecture 6 - Python Intermediate Python Programming Course Algorithms and Data Structures Tutorial - Full Course for Beginners </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://datanotes.tech/docs/notes/coding-tools/r/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://datanotes.tech/docs/notes/coding-tools/r/resources/</guid>
+      <description>Resources#WebsitesCode Academy Statistical Inference Course Notes R for Statistical Learning Applied Statistics with R RPubs </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://datanotes.tech/docs/notes/coding-tools/sql/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://datanotes.tech/docs/notes/coding-tools/sql/resources/</guid>
+      <description>Resources#Beginnersqlbolt w3schools sql zoo Advancedmode sql postgres SQL exercises leetcode sql hackerrank sql freecodecamp sql video tutorial </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://datanotes.tech/docs/notes/coding-tools/tools/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://datanotes.tech/docs/notes/coding-tools/tools/resources/</guid>
+      <description>Learning Resources#WebsitesLearning Git Branching Online coursesMissing semester of CS </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://datanotes.tech/docs/notes/machine-learning/applied-ml/model_pipeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://datanotes.tech/docs/notes/machine-learning/applied-ml/model_pipeline/</guid>
+      <description>Pipeline#import sklearn.linear_model Data#Model pipeline#model = sklearn.linear_model.LinearRegression() model.fit(X, y) model.predict(X_test) </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://datanotes.tech/docs/notes/machine-learning/supervised-models/knn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://datanotes.tech/docs/notes/machine-learning/supervised-models/knn/</guid>
+      <description>K-nearnest neighbor#Concept#KNN is a special case where no learning is performed. It is a supervised machine learning algorithm. It is also a non-parametric algorithm, meaning it does not have strict requirements for the underlying distribution of the data. It can be used for regression or classification. The data points are grouped together baesd on similarity metric. The prediction is baed on training data only. sklearn implementation of KNeighbors can be found here.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://datanotes.tech/docs/notes/machine-learning/supervised-models/trees/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://datanotes.tech/docs/notes/machine-learning/supervised-models/trees/</guid>
+      <description>Tree models#Decision trees#• Tree constructed by recursively splitting a data into new groupings based on statistical measure of the data
+Decision Trees#</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://datanotes.tech/docs/notes/mlops/deployment/readings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://datanotes.tech/docs/notes/mlops/deployment/readings/</guid>
+      <description>Overall#Online endpoints#https://learn.microsoft.com/en-us/azure/machine-learning/how-to-deploy-online-endpoints?view=azureml-api-2&amp;tabs=azure-cli https://cloud.google.com/ai-platform/prediction/docs/deploying-models#rest-api https://ubuntu.com/blog/guide-to-ml-model-serving</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://datanotes.tech/docs/notes/mlops/resources/blogs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://datanotes.tech/docs/notes/mlops/resources/blogs/</guid>
+      <description>Overall#Rules of Machine Learning#https://developers.google.com/machine-learning/guides/rules-of-ml</description>
+    </item>
+    
+  </channel>
+</rss>
