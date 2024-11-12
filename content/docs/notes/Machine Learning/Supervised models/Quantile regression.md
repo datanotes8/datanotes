@@ -1,5 +1,5 @@
 ---
-title: "My Hidden Page"
+title: "Quantile Regression"
 draft: false
 ---
 

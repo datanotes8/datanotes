@@ -1,5 +1,5 @@
 ---
-title: "My Hidden Page"
+title: "Gradient Boosting"
 draft: true
 ---
 

@@ -1,3 +1,7 @@
+---
+title: "K-Nearest Neighbor"
+draft: false
+---
 # **K-nearnest neighbor**
 ## **Concept**
 KNN is a special case where no learning is performed. It is a supervised machine learning algorithm. It is also a non-parametric algorithm, meaning it does not have strict requirements for the underlying distribution of the data. It can be used for regression or classification. The data points are grouped together baesd on similarity metric. The prediction is baed on training data only. sklearn implementation of KNeighbors can be found [<span style="display: none">here</span>](https://scikit-learn.org/stable/modules/neighbors.html).
