@@ -232,3 +232,24 @@ Pros: Learns optimal sequential decisions
 Cons: Slow convergence, unstable training, exploration–exploitation trade-off
 
 Common algorithms: Q-learning, DQN, Policy Gradient, PPO, A3C
+---
+# Unsupervised Learning
+## K-Means Clustering
+- Partition data into k clusters based on feature similarity
+- Steps:
+    - Initialize k centroids randomly
+    - Assign each data point to the nearest centroid using distance metric
+    - Update centroids by calculating the mean of assigned points
+    - Iterate until centroids stabilize
+- Eblow method: within cluster sum of squares against number of clusters to optimize k
+- Other types: k-medoids
+- k-selection: gap statistics (wcss), silhouette score (how well data points fit within their clusters vs next closest cluster)
+
+## Hierarchical Clustering
+- Agglomerative (bottom-up) or divisive (top-down) approaches
+- Algorithm:
+    - Start with one data point
+    - Treat each data as one cluster
+    - Merge clusters
+    - Dendrograms are formed at end to group clusters
+- Example: DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
