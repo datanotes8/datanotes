@@ -1,8 +1,74 @@
 ---
-title: "Deep Learning"
+title: "Neural Networks and Deep Learning"
 draft: false
 ---
-# Deep Learning
+# Neural Networks and Deep Learning
+## Theory
+### NN Elements 
+Neural network is a general framework that uses layers of interconnected nodes (neurons) to learn complex patterns from data. Deep learning is a subset of NN and refers to neural networks with multiple hidden layers that can learn hierarchical representations.
+Neural network consists of nodes and conenctions, where they are connected by weights or parameters. These weights are learned in a process called backpropagation.
+
+{{< hint info >}} 
+Nodes
+{{< /hint >}}
+Input nodes, hidden nodes, output nodes
+- Input layers are the feature vectors x
+- Hidden layers are nodes between IO nodes that learns representations from the data
+- Ouput layer gives the predictions y
+
+{{< hint info >}} 
+Activation functions
+{{< /hint >}}
+Functions used to help the network learn. 
+- Softmax, ReLu, Sigmoid, Tanh   
+
+We use activation function to get the x-axis and y-axis values for the input data. The y-axis value depends on the activation function chosen.
+
+{{< hint info >}} 
+Weights and biases
+{{< /hint >}}
+Weights control importance of input features
+Biases allow model to fit data better by shifting activation function.
+
+{{< hint info >}} 
+Backpropagation
+{{< /hint >}}
+Fiting the data to the neural network and provide parameters/weights for the connections between nodes.
+
+{{< hint info >}} 
+Epoch and batching
+{{< /hint >}}
+Epoch: one full pass through training data
+Batch: subset of data used for one gradient update
+
+### perceptron
+{{< hint info >}} 
+perceptron
+{{< /hint >}}
+This is the simplest type of neural network, consisting of a single layer of output nodes connected to input features. It can only learn linear decision boundaries.
+
+### Attention
+Computes weighted average of all input vectors. This allows each token to look at other tokens for context. Each token gets:
+- Query (Q): goal
+- Key (K): match
+- Value (V): information
+$Attention(Q,K,V) = softmax(\frac{QK^T}{\sqrt{d_k}})V$
+
+### Transformers
+Type of neural network for sequences such as text or time series, but they don't use recurrence RNN or convolutions CNN.
+Input embeddings
+- Convert token into vectors.
+Positional encodings
+- Add sequence order info because transformers have no built-in order like RNNs.
+Self-attention mechanism
+- Learns the section of the input to focus on for each token.
+Feed-forward layer
+- NN applied to each position's output.
+Layer normalization and residuals
+- Stabilizes and speed up training
+
+
+## Application
 - ETL
     -  import, preprocessing, batching for gradient updates, dataloader
 - Model

@@ -185,9 +185,10 @@ Cons:
 - Computationally intensive for large datasets
 - Sensitive to choice of kernel and hyperparameters
 ---
-# Deep Learning
+# Neural network and Deep Learning
+---
+## Neural network
 Using neural networks with multiple layers to learn complex patterns in data.
-### Neural network
 Main components:
 - Layers: input, hidden, output
 - Parameters: weights, biases
@@ -210,6 +211,30 @@ Logic
 - Optimizer step > update parameters
 - Zero gradients (to prevent accumulation or interference between batches, in plain language, clear old gradients before computing new ones)
 - Evaluation on validation set (metrics)
+---
+## Transformers
+A type of DL model primarily used for sequential data like text, time series, or audio.
+It uses self attention to weight all input elemenmts relative to each other, allowing the model to capture contextual relationships.
+Main components:
+- Attention mechanism: self-attention, multi-head attention
+- Positional encoding: adds information about the position of tokens in the sequence
+- Encoder-decoder architecture: used in seq2seq tasks
+Common applications: NLP (BERT, GPT), time series forecasting, image processing (Vision Transformers)
+
+## Comparision
+| Type                        | Best for                    | Core idea                                                        | Limitation                                             |
+| --------------------------  | --------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------ |
+| **Feedforward NN/Multilayer Perceptron MLP**| Tabular or static data| Simple stacked layers (no memory)| Cannot handle sequence or spatial patterns|
+| **Transformer**| Text, time series, vision| Uses attention instead of recurrence or convolution| Requires more compute, large data|
+| **Convolutional NN (CNN)**| Images, spatial data| Uses filters (kernels) that scan input to capture local patterns | Poor at long-term or sequential relations|
+|**Autoencoder**| Dimensionality reduction, anomaly detection| Learns compressed representation of input data| May lose important info in compression|
+| **Recurrent NN (RNN)**| Sequential/time-series data| Maintains internal memory of previous steps| Struggles with long dependencies (vanishing gradients) |
+| **Long Short-Term Memory (LSTM)** | Long sequences| RNN variant with “gates” to keep or forget information| Still sequential (slow on long data)|
+
+## Pre-training vs post-training
+Pre-training: training a model on a large dataset before fine-tuning it on a specific task. Common in NLP with models like BERT, GPT.
+Post-training: Fine-tune for task-specific behavior.
+
 ---
 # Reinforcement Learning
 Learning via interaction with an environment to maximize cumulative reward.

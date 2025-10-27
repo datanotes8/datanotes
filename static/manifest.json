@@ -1,0 +1,8 @@
+{
+  "name": "ML Cheatsheet",
+  "short_name": "ML Cheat",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4CAF50"
+}
