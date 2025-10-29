@@ -34,9 +34,21 @@ Regularization is a technique used to prevent overfitting by adding a penalty te
 - L1 Regularization (Lasso): adds the absolute value of the magnitude of coefficients as a penalty term to the loss function. It can lead to sparse models where some coefficients are exactly zero.
 - L2 Regularization (Ridge): adds the squared magnitude of coefficients as a penalty term to the loss function. It tends to shrink coefficients but does not set them to zero.  
 ---
-## Scaling and normalization
+## Feature Selection and Engineering
+### Scaling and normalization
 - Scaling: transforming features to a specific range, such as [0, 1] or [-1, 1]. Common methods include Min-Max Scaling and Standardization (Z-score normalization).
 - Normalization: transforming features to have a mean of 0 and a standard deviation of 1. This is often done using StandardScaler in libraries like scikit-learn.
+### One-hot ecndoing
+- Converts categorical variables into binary vectors.
+### Target encoding
+- Replaces categorical variable with the mean of the target variable for each category.
+### Feature extraction
+- Techniques like PCA (Principal Component Analysis) reduce dimensionality while retaining important information.
+### Feature selection methods
+- filtering (corelection, chi-square)
+- wrapper methods (recursive feature elimination, foward/backward selection)
+- embedded methods (Lasso, decision tree feature importance)
+
 ---
 ## Metrics
 - Regression: Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), R-squared (R²)
@@ -184,6 +196,10 @@ Pros:
 Cons:
 - Computationally intensive for large datasets
 - Sensitive to choice of kernel and hyperparameters
+
+## ML model trade-offs
+
+
 ---
 # Neural network and Deep Learning
 ---
@@ -234,6 +250,14 @@ Common applications: NLP (BERT, GPT), time series forecasting, image processing 
 ## Pre-training vs post-training
 Pre-training: training a model on a large dataset before fine-tuning it on a specific task. Common in NLP with models like BERT, GPT.
 Post-training: Fine-tune for task-specific behavior.
+
+## Drop out and batch norm
+- Dropout: regularization technique that randomly sets a fraction of input units to 0 during training to prevent overfitting.
+- Batch Normalization: normalizes the inputs of each layer to have a mean of 0 and a standard deviation of 1, improving training speed and stability.
+
+## Bert vs GPT
+- BERT (Bidirectional Encoder Representations from Transformers): designed for understanding context in text by looking at both left and right context. Used for tasks like question answering, sentiment analysis.
+- GPT (Generative Pre-trained Transformer): designed for generating coherent text by predicting the next word in a sequence. Used for tasks like text generation, summarization.
 
 ---
 # Reinforcement Learning
