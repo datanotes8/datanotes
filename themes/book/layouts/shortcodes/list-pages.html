@@ -1,0 +1,22 @@
+<!-- <ul>
+  {{ range .Page.Pages }}
+    {{ if .Title }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  {{ end }}
+</ul> -->
+
+
+<ul style="list-style: none; padding: 0;">
+  {{ range .Page.Pages }}
+    {{ if .Title }}
+      <li style="margin-bottom: 0.5rem;">
+        <div class="alert alert-info" style="padding: 0.5rem 1rem; border-radius: 6px; border-left: 4px solid #3b82f6; background-color: #e0f2fe;">
+          <a href="{{ .RelPermalink }}" style="text-decoration: none; color: inherit;">
+            {{ .Title }}
+          </a>
+        </div>
+      </li>
+    {{ end }}
+  {{ end }}
+</ul>
