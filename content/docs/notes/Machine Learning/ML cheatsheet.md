@@ -1,6 +1,7 @@
 ---
 title: "ML Cheatsheet"
 draft: false
+weight: 1
 ---
 # Core ML Concepts
 ---

@@ -1,5 +1,6 @@
 ---
 bookCollapseSection: True
-weight: 1
+weight: 2
 title: "MLOPs"
+bookCollapseSection: false
 ---

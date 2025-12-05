@@ -3,8 +3,7 @@ menu:
   after:
     name: blog
     weight: 2
+    identifier: blog
 title: Blog
-# bookCollapseSection: true
-# weight: 20
+bookCollapseSection: false
 ---
-

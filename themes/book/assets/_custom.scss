@@ -1,3 +1,4 @@
+/* Desktop sidebar - always visible */
 .book-menu {
   display: block !important;
   opacity: 1 !important;
@@ -9,20 +10,32 @@
   width: 300px;
   padding: 1rem;
   overflow-y: auto;
+  transition: transform 0.3s ease;
 }
 
 .book-page {
   margin-left: 300px;
 }
 
+/* Mobile sidebar - collapsible */
 @media screen and (max-width: 56rem) {
   .book-menu {
-    position: fixed;
+    width: 80%; /* smaller for mobile */
+    max-width: 300px;
+    transform: translateX(0); /* default shown; remove this line if you want it hidden initially */
     z-index: 100;
     background-color: var(--body-background);
   }
-  
+
   .book-page {
     margin-left: 0;
   }
+
+  /* Optional: hidden by default, show when .open is added */
+  /* .book-menu {
+       transform: translateX(-100%);
+     }
+     .book-menu.open {
+       transform: translateX(0);
+     } */
 }

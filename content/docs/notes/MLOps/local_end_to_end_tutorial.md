@@ -1,6 +1,6 @@
 
 ---
-title: "Local End-to-End Deployment Tutorial"
+title: "End-to-End Deployment Tutorial"
 draft: false
 ---
 
