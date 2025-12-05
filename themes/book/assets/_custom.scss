@@ -29,11 +29,3 @@
     margin-left: 0;
   }
 }
-
-@media screen and (max-width: 56rem) {
-  /* Force sidebar visible by default */
-  .book-menu {
-    transform: translateX(0) !important;
-    opacity: 1 !important;
-  }
-}
