@@ -3,7 +3,7 @@ title: "ML Cheatsheet"
 draft: false
 weight: 1
 ---
-# Core ML Concepts
+# ML/AI/DS Cheatsheet
 ---
 ## Cross-validation
 Cross-validation is a technique used to assess how a model will generalize to an independent dataset. Another word for this is backtest using historical or actual data.

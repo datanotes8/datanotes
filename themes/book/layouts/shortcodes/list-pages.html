@@ -7,7 +7,7 @@
 </ul> -->
 
 
-<ul style="list-style: none; padding: 0;">
+<!-- <ul style="list-style: none; padding: 0;">
   {{ range .Page.Pages }}
     {{ if .Title }}
       <li style="margin-bottom: 0.5rem;">
@@ -19,4 +19,28 @@
       </li>
     {{ end }}
   {{ end }}
-</ul>
+</ul> -->
+
+
+{{ define "list-pages-recursive" }}
+  {{- $level := .level | default 0 -}}
+  {{- range .pages }}
+    <div style="margin-left: {{ mul 60 $level }}px; margin-bottom: 0.5rem;">
+      <div class="alert alert-info"
+           style="padding: 0.5rem 1rem; border-radius: 6px;
+                  border-left: 4px solid #3b82f6; background-color: #e0f2fe; font-weight: bold;">
+        <a href="{{ .RelPermalink }}" style="text-decoration: none; color: inherit;">
+          {{ .Title }}
+        </a>
+      </div>
+    </div>
+
+    {{- if eq .Kind "section" }}
+      {{- template "list-pages-recursive" dict "pages" .Pages "level" (add $level 1) }}
+    {{- end }}
+  {{- end }}
+{{ end }}
+
+{{ template "list-pages-recursive" dict "pages" .Page.Sections "level" 0 }}
+{{ template "list-pages-recursive" dict "pages" .Page.RegularPages "level" 0 }}
+

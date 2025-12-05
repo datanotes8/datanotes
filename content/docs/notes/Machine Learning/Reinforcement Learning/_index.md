@@ -1,4 +1,7 @@
 ---
+title: "Reinforcement Learning"
 bookCollapseSection: true
-weight: 20
+weight: 1
 ---
+# Reinforcement Learning
+{{< list-pages >}}

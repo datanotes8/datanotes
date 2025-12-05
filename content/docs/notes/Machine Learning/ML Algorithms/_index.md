@@ -1,4 +1,7 @@
 ---
+title: "ML Algorithms"
 bookCollapseSection: true
-weight: 20
+weight: 1
 ---
+# ML Algorithms
+{{< list-pages >}}
